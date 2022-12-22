@@ -7,6 +7,7 @@ setInterval(() => {
   let ampm = hr < 12 ? "AM" : "PM";
 
   hr = hr > 12 ? hr - 12 : hr;
+  hr = hr < 1 ? 12 : hr; // Whwn it's 12 of night (i.e, 24)
 
   hr = hr < 10 ? "0" + hr : hr;
   min = min < 10 ? "0" + min : min;
